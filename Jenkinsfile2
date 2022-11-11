@@ -14,7 +14,11 @@ pipeline {
             }
             steps {
                 script {
+<<<<<<< HEAD
                     app = docker.build("dimathem/train-schedule")
+=======
+                    app = docker.build("<DOCKER_HUB_USERNAME>/train-schedule")
+>>>>>>> 416cedc4fb3f994098256dacb645d34ae9812415
                     app.inside {
                         sh 'echo $(curl localhost:8080)'
                     }
